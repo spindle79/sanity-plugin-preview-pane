@@ -1,0 +1,63 @@
+{
+  "name": "sanity-plugin-preview-pane",
+  "version": "0.1.0",
+  "description": "Sanity Studio plugin that adds three preview entry points for content editors: an inline iframe pane next to the form, an Open Preview document action that pops the URL in a new window, and an embeddable inline preview component for custom field renders.",
+  "keywords": [
+    "sanity",
+    "sanity-plugin",
+    "preview",
+    "iframe",
+    "live-preview",
+    "studio"
+  ],
+  "license": "MIT",
+  "author": "Adam Harris",
+  "homepage": "https://github.com/spindle79/sanity-plugin-preview-pane",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spindle79/sanity-plugin-preview-pane.git"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "sanity-plugin-iframe-pane": "^3.1.6"
+  },
+  "peerDependencies": {
+    "@sanity/icons": "^3",
+    "@sanity/ui": "^2",
+    "react": "^18 || ^19",
+    "sanity": "^3 || ^4"
+  },
+  "devDependencies": {
+    "@sanity/icons": "^3",
+    "@sanity/ui": "^2",
+    "@types/react": "^19",
+    "react": "^19",
+    "sanity": "^4",
+    "tsup": "^8",
+    "typescript": "^5.7"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
