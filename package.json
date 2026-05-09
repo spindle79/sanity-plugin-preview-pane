@@ -37,7 +37,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "type-check": "tsc --noEmit",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepare": "husky"
   },
   "dependencies": {
     "sanity-plugin-iframe-pane": "^3.1.6"
@@ -55,9 +56,15 @@
     "react": "^19",
     "sanity": "^4",
     "tsup": "^8",
-    "typescript": "^5.7"
+    "typescript": "^5.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.12",
+    "prettier": "^3.4.2"
   },
   "engines": {
     "node": ">=24.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,mjs,cjs,json,md,yaml,yml,css,html}": "prettier --write"
   }
 }
